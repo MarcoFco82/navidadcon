@@ -22,13 +22,21 @@ function SuccessContent() {
         
         <div className="bg-green-50 border border-green-200 rounded-xl p-4">
           <p className="text-green-800 text-sm">
-            📧 Te enviaremos un correo con el video y las instrucciones de uso.
+            📋 Completa el formulario con tu logo y texto para crear tu video personalizado.
           </p>
         </div>
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSduop9NHbsKVtDBTy_25eUHOJY_DnFOmneNCD1P0lPNa5aT_w/viewform"
+          target="_blank"
+          className="inline-block w-full py-4 rounded-xl font-semibold text-lg bg-christmas-gold text-white hover:bg-[var(--christmas-gold-light)] shadow-lg hover:shadow-xl transition-all"
+        >
+          Enviar mi logo y texto
+        </a>
         
         <a
           href="/"
-          className="inline-block w-full py-4 rounded-xl font-semibold text-lg bg-christmas-wine text-white hover:bg-[var(--christmas-wine-light)] shadow-lg hover:shadow-xl transition-all"
+          className="inline-block w-full py-3 rounded-xl font-semibold text-christmas-wine border-2 border-christmas-wine hover:bg-christmas-wine hover:text-white transition-all"
         >
           Volver al inicio
         </a>
