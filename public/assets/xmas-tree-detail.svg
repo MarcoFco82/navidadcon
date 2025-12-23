@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" fill="none">
+  <defs>
+    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D5016;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A3009;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <path d="M200 50 L350 250 L300 250 L380 400 L320 400 L400 600 L280 600 L280 750 L120 750 L120 600 L0 600 L80 400 L20 400 L100 250 L50 250 Z" 
+        fill="url(#treeGrad)" />
+</svg>

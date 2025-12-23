@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  /* Colores navideños base */
+  --christmas-wine: #27020C;
+  --christmas-wine-light: #4A1020;
+  --christmas-gold: #D4AF37;
+  --christmas-gold-light: #E5C158;
+  --christmas-cream: #E8E8E8;
+  --christmas-dark: #1A1A1A;
+  
+  /* Fondos */
+  --background: var(--christmas-cream);
+  --foreground: var(--christmas-dark);
+  
+  /* Fuentes */
+--font-display: 'Nunito', system-ui, sans-serif;
+--font-body: 'Nunito', system-ui, sans-serif;
+--font-logo: 'Bebas Neue', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+/* Utilidades navideñas */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.bg-christmas-wine {
+  background-color: var(--christmas-wine);
+}
+
+.bg-christmas-gold {
+  background-color: var(--christmas-gold);
+}
+
+.text-christmas-wine {
+  color: var(--christmas-wine);
+}
+
+.text-christmas-gold {
+  color: var(--christmas-gold);
+}
+
+/* Efecto de nieve sutil en el fondo */
+.snow-bg {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.3) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.3) 1px, transparent 1px),
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 100px 100px, 150px 150px, 200px 200px;
+}
+
+/* Scrollbar estilizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--christmas-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--christmas-wine);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--christmas-wine-light);
+}
