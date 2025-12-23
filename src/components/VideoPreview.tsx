@@ -10,7 +10,6 @@ interface VideoPreviewProps {
 export default function VideoPreview({ medida }: VideoPreviewProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -19,30 +18,8 @@ export default function VideoPreview({ medida }: VideoPreviewProps) {
     }
   };
 
-  const handleBuyClick = async () => {
-    setIsLoading(true);
-    
-    try {
-      const response = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ medida: medida.id }),
-      });
-      
-      const { url, error } = await response.json();
-      
-      if (error) {
-        alert('Error al procesar el pago. Intenta de nuevo.');
-        return;
-      }
-      
-      window.location.href = url;
-    } catch (error) {
-      console.error('Checkout error:', error);
-      alert('Error al conectar con el servidor.');
-    } finally {
-      setIsLoading(false);
-    }
+  const handleBuyClick = () => {
+    window.location.href = 'https://buy.stripe.com/7sY00igsQ2tY6SW3uV67S00';
   };
 
   return (
@@ -67,7 +44,6 @@ export default function VideoPreview({ medida }: VideoPreviewProps) {
           />
         </div>
         
-        {/* Botón de audio */}
         <button
           onClick={toggleMute}
           className="absolute bottom-3 right-3 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-all"
@@ -102,14 +78,9 @@ export default function VideoPreview({ medida }: VideoPreviewProps) {
 
         <button
           onClick={handleBuyClick}
-          disabled={isLoading}
-          className={`w-full py-4 rounded-xl font-semibold text-lg shadow-lg transition-all ${
-            isLoading 
-              ? 'bg-gray-300 text-gray-500 cursor-wait' 
-              : 'bg-christmas-gold text-white hover:bg-[var(--christmas-gold-light)] hover:shadow-xl'
-          }`}
+          className="w-full py-4 rounded-xl font-semibold text-lg bg-christmas-gold text-white hover:bg-[var(--christmas-gold-light)] shadow-lg hover:shadow-xl transition-all"
         >
-          {isLoading ? 'Procesando...' : 'Comprar animación'}
+          Comprar animación
         </button>
         
         <p className="text-xs text-gray-400">
