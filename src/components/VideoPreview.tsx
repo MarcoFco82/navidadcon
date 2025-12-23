@@ -36,7 +36,7 @@ export default function VideoPreview({ medida }: VideoPreviewProps) {
           <video
             ref={videoRef}
             className="absolute inset-0 w-full h-full object-cover"
-            src={`/anim/${medida.video}`}
+            src={medida.video}
             autoPlay
             loop
             muted={isMuted}

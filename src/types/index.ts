@@ -27,7 +27,7 @@ export const MEDIDAS: MedidaConfig[] = [
     width: 1080,
     height: 1080,
     folder: '1080x1080',
-    video: 'xmas_1_1.mp4',
+    video: 'https://pub-2097fe72397c46bf8bb6b48fd08e8833.r2.dev/xmas_1_1.mp4',
     textArea: {
       top: 460,
       bottom: 360,
@@ -40,7 +40,7 @@ export const MEDIDAS: MedidaConfig[] = [
     width: 1920,
     height: 1080,
     folder: '1920x1080',
-    video: 'xmas_16_9.mp4',
+    video: 'https://pub-2097fe72397c46bf8bb6b48fd08e8833.r2.dev/xmas_16_9.mp4',
     textArea: {
       top: 380,
       bottom: 320,
@@ -53,7 +53,7 @@ export const MEDIDAS: MedidaConfig[] = [
     width: 1080,
     height: 1920,
     folder: '1080x1920',
-    video: 'xmas_9_16.mp4',
+    video: 'https://pub-2097fe72397c46bf8bb6b48fd08e8833.r2.dev/xmas_9_16.mp4',
     textArea: {
       top: 860,
       bottom: 750,
